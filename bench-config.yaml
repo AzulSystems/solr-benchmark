@@ -1,0 +1,30 @@
+hostnamePortList: "zoo-node-1:2181,zoo-node-2:2181,zoo-node-3:2181" # SolrCloud on AWS
+solrCollection: "test"
+
+# warm-up and run duration
+benchmarkWarmupTime: 300
+benchmarkMeasurementTime: 900
+
+# resources
+maxNumberOfThreads: 100
+maxNumberOfClients: 100
+
+# distribute 'resources' proportionately b/w select and update queries
+writePercent: 20
+
+# 'requested rate'
+# Run the 'select' queries at a very high rate 100K req/sec (throughput mode)
+targetRateForSelectOpAtWarmup: 100000
+targetRateForSelectOp: 100000
+
+# Override rate 'requested rate' values of update queries
+# Run the 'update' queries at a fixed rate instead of the values set via writePercent
+targetRateForUpdateOpAtWarmup: 1000
+targetRateForUpdateOp: 1000
+
+selectQueryFiles: "QueryFiles/10000/COMMENT_FIELD.txt QueryFiles/10000/COMMENT_FUZZY.txt QueryFiles/10000/COMMENT_PHRASE.txt QueryFiles/10000/COMMENT_PROXIMITY.txt QueryFiles/10000/TEXT_FIELD.txt QueryFiles/10000/TEXT_FUZZY.txt QueryFiles/10000/TEXT_PHRASE.txt QueryFiles/10000/TEXT_PROXIMITY.txt QueryFiles/10000/TIMESTAMP_RANGE.txt QueryFiles/10000/TITLE_FIELD.txt QueryFiles/10000/TITLE_FUZZY.txt QueryFiles/10000/USERNAME_FIELD.txt QueryFiles/10000/USERNAME_FUZZY.txt QueryFiles/10000/USERNAME_PHRASE.txt QueryFiles/10000/USERNAME_PROXIMITY.txt"
+documentIdFile: "QueryFiles/10000/docIdFile.txt"
+
+recordingLatency: false # (Only interested in throughput scores)
+maxUsableSelectQueries: 10000
+

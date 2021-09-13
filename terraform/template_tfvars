@@ -1,0 +1,5 @@
+ami = "ami-01e36b7901e884a10"      # CentOS Linux 7 x86_64 us-east-2 ohio
+region = "us-east-2"
+solr_server_node-instance_type = "m5.8xlarge"
+zookeeper-node-instance_type = "m5.large"
+solrj-client-node-instance_type = "m5.8xlarge"
