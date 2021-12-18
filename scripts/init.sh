@@ -19,7 +19,7 @@ if [[ -z "${INIT_ALREADY_SOURCED}" ]];then # Don't source if already sourced
     declare -r ZULU_DIST_URL=https://cdn.azul.com/zulu/bin/zulu11.50.19-ca-jdk11.0.12-linux_x64.tar.gz
     declare -r ZING_DIST_URL=https://cdn.azul.com/zing/releases/tgz/zing21.07.0.0-3-ca-jdk11.0.12-linux_x64.tar.gz
     declare -r ZOOKEEPER_DIST_URL=https://archive.apache.org/dist/zookeeper/zookeeper-3.4.13/zookeeper-3.4.13.tar.gz
-    declare -r MAVEN_DIST_URL=https://mirrors.estointernet.in/apache/maven/maven-3/3.8.1/binaries/apache-maven-3.8.1-bin.tar.gz
+    declare -r MAVEN_DIST_URL=https://archive.apache.org/dist/maven/maven-3/3.8.1/binaries/apache-maven-3.8.1-bin.tar.gz
 
     declare -r SOLR_DIST=`echo ${SOLR_DIST_URL##*/}`
     declare -r ZULU_DIST=`echo ${ZULU_DIST_URL##*/}`
